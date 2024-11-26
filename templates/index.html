@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Energética</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calculadora de Requerimientos Energéticos</h1>
+        
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="number" id="peso" placeholder="Peso (kg)" required>
+            <input type="number" id="altura" placeholder="Altura (cm)" required>
+            <input type="number" id="edad" placeholder="Edad (años)" required>
+            <select id="genero">
+                <option value="genero">-Escoger Sexo-</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+            <select id="actividad">
+                <option value="sedentario">Sedentario</option>
+                <option value="ligero">Ligero</option>
+                <option value="moderado">Moderado</option>
+                <option value="activo">Activo</option>
+                <option value="muy_activo">Muy activo</option>
+            </select>
+            
+            <button type="button" onclick="calcular()">Calcular</button>
+            <button type="button" onclick="borrarHistorial()">Borrar Historial</button>
+            <button type="button" onclick="toggleMostrarHistorial()">Mostrar/Ocultar Historial</button> 
+            
+        </form>
+        <div id="resultado"></div>
+        <div id="historial" style="display: none;"></div> <!-- Historial inicialmente oculto -->
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
